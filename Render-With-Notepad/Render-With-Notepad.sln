@@ -9,6 +9,14 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FakeKeyInputToNotepad", "Fa
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RayTracer", "RayTracer\RayTracer.vcxproj", "{3E2006FB-1AB7-4842-939A-0483254528A2}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Inject_Payload_Messagebox", "Inject_Payload_Messagebox\Inject_Payload_Messagebox.vcxproj", "{077852FA-6114-4A72-8C66-9B79BED2EA13}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LoadLibrary_Injector", "LoadLibrary_Injector\LoadLibrary_Injector.vcxproj", "{1465BD59-B43E-47C5-8211-F5E4C1FAE18D}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Inject_Payload_HookKeyboard", "Inject_Payload_HookKeyboard\Inject_Payload_HookKeyboard.vcxproj", "{34F846ED-3C5F-42EE-A48E-41D11D276593}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HookKeyboard_Injector", "HookKeyboard_Injector\HookKeyboard_Injector.vcxproj", "{79A6660B-7B06-445C-9A16-D5C202596EC2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -41,6 +49,38 @@ Global
 		{3E2006FB-1AB7-4842-939A-0483254528A2}.Release|x64.Build.0 = Release|x64
 		{3E2006FB-1AB7-4842-939A-0483254528A2}.Release|x86.ActiveCfg = Release|Win32
 		{3E2006FB-1AB7-4842-939A-0483254528A2}.Release|x86.Build.0 = Release|Win32
+		{077852FA-6114-4A72-8C66-9B79BED2EA13}.Debug|x64.ActiveCfg = Debug|x64
+		{077852FA-6114-4A72-8C66-9B79BED2EA13}.Debug|x64.Build.0 = Debug|x64
+		{077852FA-6114-4A72-8C66-9B79BED2EA13}.Debug|x86.ActiveCfg = Debug|Win32
+		{077852FA-6114-4A72-8C66-9B79BED2EA13}.Debug|x86.Build.0 = Debug|Win32
+		{077852FA-6114-4A72-8C66-9B79BED2EA13}.Release|x64.ActiveCfg = Release|x64
+		{077852FA-6114-4A72-8C66-9B79BED2EA13}.Release|x64.Build.0 = Release|x64
+		{077852FA-6114-4A72-8C66-9B79BED2EA13}.Release|x86.ActiveCfg = Release|Win32
+		{077852FA-6114-4A72-8C66-9B79BED2EA13}.Release|x86.Build.0 = Release|Win32
+		{1465BD59-B43E-47C5-8211-F5E4C1FAE18D}.Debug|x64.ActiveCfg = Debug|x64
+		{1465BD59-B43E-47C5-8211-F5E4C1FAE18D}.Debug|x64.Build.0 = Debug|x64
+		{1465BD59-B43E-47C5-8211-F5E4C1FAE18D}.Debug|x86.ActiveCfg = Debug|Win32
+		{1465BD59-B43E-47C5-8211-F5E4C1FAE18D}.Debug|x86.Build.0 = Debug|Win32
+		{1465BD59-B43E-47C5-8211-F5E4C1FAE18D}.Release|x64.ActiveCfg = Release|x64
+		{1465BD59-B43E-47C5-8211-F5E4C1FAE18D}.Release|x64.Build.0 = Release|x64
+		{1465BD59-B43E-47C5-8211-F5E4C1FAE18D}.Release|x86.ActiveCfg = Release|Win32
+		{1465BD59-B43E-47C5-8211-F5E4C1FAE18D}.Release|x86.Build.0 = Release|Win32
+		{34F846ED-3C5F-42EE-A48E-41D11D276593}.Debug|x64.ActiveCfg = Debug|x64
+		{34F846ED-3C5F-42EE-A48E-41D11D276593}.Debug|x64.Build.0 = Debug|x64
+		{34F846ED-3C5F-42EE-A48E-41D11D276593}.Debug|x86.ActiveCfg = Debug|Win32
+		{34F846ED-3C5F-42EE-A48E-41D11D276593}.Debug|x86.Build.0 = Debug|Win32
+		{34F846ED-3C5F-42EE-A48E-41D11D276593}.Release|x64.ActiveCfg = Release|x64
+		{34F846ED-3C5F-42EE-A48E-41D11D276593}.Release|x64.Build.0 = Release|x64
+		{34F846ED-3C5F-42EE-A48E-41D11D276593}.Release|x86.ActiveCfg = Release|Win32
+		{34F846ED-3C5F-42EE-A48E-41D11D276593}.Release|x86.Build.0 = Release|Win32
+		{79A6660B-7B06-445C-9A16-D5C202596EC2}.Debug|x64.ActiveCfg = Debug|x64
+		{79A6660B-7B06-445C-9A16-D5C202596EC2}.Debug|x64.Build.0 = Debug|x64
+		{79A6660B-7B06-445C-9A16-D5C202596EC2}.Debug|x86.ActiveCfg = Debug|Win32
+		{79A6660B-7B06-445C-9A16-D5C202596EC2}.Debug|x86.Build.0 = Debug|Win32
+		{79A6660B-7B06-445C-9A16-D5C202596EC2}.Release|x64.ActiveCfg = Release|x64
+		{79A6660B-7B06-445C-9A16-D5C202596EC2}.Release|x64.Build.0 = Release|x64
+		{79A6660B-7B06-445C-9A16-D5C202596EC2}.Release|x86.ActiveCfg = Release|Win32
+		{79A6660B-7B06-445C-9A16-D5C202596EC2}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
