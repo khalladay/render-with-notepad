@@ -6,6 +6,7 @@
 #include <TlHelp32.h> //for PROCESSENTRY32, needs to be included after windows.h
 #include <psapi.h>
 
+
 HWND GetWindowForProcessAndClassName(DWORD pid, const char* className)
 {
 	HWND curWnd = GetTopWindow(0); //0 arg means to get the window at the top of the Z order
@@ -19,19 +20,12 @@ HWND GetWindowForProcessAndClassName(DWORD pid, const char* className)
 		if (curPid == pid)
 		{
 			GetClassName(curWnd, classNameBuf, 256);
-
 			if (strcmp(className, classNameBuf) == 0)
 			{
 				return curWnd;
 			}
 
-			HWND childWindow = GetTopWindow(curWnd);
-			GetClassName(childWindow, classNameBuf, 256);
-
-			while (strcmp(className, classNameBuf) != 0 && childWindow != NULL)
-			{
-				childWindow = GetNextWindow(childWindow, GW_HWNDNEXT);
-			}
+			HWND childWindow = FindWindowEx(curWnd, NULL, className, NULL);
 
 			if (childWindow != NULL)
 			{
