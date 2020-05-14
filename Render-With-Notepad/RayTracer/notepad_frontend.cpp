@@ -225,8 +225,9 @@ void initializeNotepadFrontend(const char* pathToNotepadExe, const char* pathToH
 	instance.screenWidth = windowWidth;
 	instance.screenWidthChars = charsPerLine;
 
-	MoveWindow(instance.topWindow, 100, 100, instance.screenWidth, instance.screenHeight, true);
 	instance.frontBufferPtr = CreateAndAcquireRemoteCharBufferPtr();
+	MoveWindow(instance.topWindow, 100, 100, instance.screenWidth, instance.screenHeight, true);
+
 	swapBuffersAndRedraw();
 }
 

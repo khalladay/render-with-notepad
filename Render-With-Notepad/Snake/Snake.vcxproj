@@ -123,6 +123,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="notepad_frontend.cpp" />
+    <ClCompile Include="snake.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="notepad_frontend.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

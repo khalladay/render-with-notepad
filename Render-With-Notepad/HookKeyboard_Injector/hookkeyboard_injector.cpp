@@ -138,18 +138,6 @@ const char* GetErrorDescription(DWORD err)
 	return "";
 }
 
-bool installRemoteHook(DWORD threadId, const char* hookDLL)
-{
-	HMODULE hookLib = LoadLibrary(hookDLL);
-	if (hookLib == NULL) return false;
-	
-	HOOKPROC hookFunc = (HOOKPROC)GetProcAddress(hookLib, "KeyboardProc");
-	if (hookFunc == NULL) return false;
-	
-	SetWindowsHookEx(WH_KEYBOARD, hookFunc, hookLib, threadId);
-	return true;
-}
-
 void installRemoteHook(DWORD threadId, const char* hookDLL)
 {
 	HMODULE hookLib = LoadLibrary(hookDLL);
