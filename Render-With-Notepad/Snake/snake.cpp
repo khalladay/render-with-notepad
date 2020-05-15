@@ -143,7 +143,7 @@ bool tick()
 		newHead = game.snakeSegments[game.front];
 		newHead.x += game.velocity.x;
 		newHead.y += game.velocity.y;
-		printf("%i %i vel %i %i\n", newHead.x, newHead.y, game.velocity.x, game.velocity.y);
+		//printf("%i %i vel %i %i\n", newHead.x, newHead.y, game.velocity.x, game.velocity.y);
 		LeaveCriticalSection(&game.velocityCritical);
 		bool gameOver = false;
 
