@@ -1,0 +1,64 @@
+References doc I kept while working on this project.
+
+Hooking: 
+http://jbremer.org/x86-api-hooking-demystified/#ah-wiki
+https://www.apriorit.com/dev-blog/160-apihooks
+http://codefromthe70s.org/mhook24.aspx
+https://docs.microsoft.com/en-us/windows/win32/winmsg/using-hooks
+https://www.codeproject.com/Articles/44326/MinHook-The-Minimalistic-x-x-API-Hooking-Libra
+https://www.microsoft.com/en-us/research/project/detours/?from=http%3A%2F%2Fresearch.microsoft.com%2Fsn%2Fdetours
+https://medium.com/@_sl4v/hooking-is-easy-right-right-fb00de2f2372
+https://ired.team/offensive-security/code-injection-process-injection/setwindowhookex-code-injection
+https://pentest.blog/offensive-iat-hooking/
+
+Code Injection:
+https://github.com/fdiskyou/injectAllTheThings
+http://deniable.org/windows/inject-all-the-things
+
+https://stackoverflow.com/questions/45614032/dll-injection-into-notepad -> messagebox injection into notepad
+https://www.elastic.co/blog/ten-process-injection-techniques-technical-survey-common-and-trending-process
+https://i.blackhat.com/USA-19/Thursday/us-19-Kotler-Process-Injection-Techniques-Gotta-Catch-Them-All-wp.pdf
+https://resources.infosecinstitute.com/using-createremotethread-for-dll-injection-on-windows/
+https://docs.microsoft.com/en-us/windows/win32/api/processthreadsapi/nf-processthreadsapi-openprocess
+https://docs.microsoft.com/en-us/windows/win32/procthread/process-security-and-access-rights
+https://docs.microsoft.com/en-us/windows/win32/api/memoryapi/nf-memoryapi-writeprocessmemory
+https://docs.microsoft.com/en-us/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress
+https://stackoverflow.com/questions/9545732/what-is-hmodule -> GetProcAddress might not be sufficient
+
+Trampolines:
+https://www.ragestorm.net/blogs/?p=107
+
+DLLs:
+https://docs.microsoft.com/en-us/windows/win32/dlls/dllmain
+
+Limited in what you can do in DLLMain:
+https://stackoverflow.com/questions/19156913/call-dll-function-after-loading-the-dll
+https://docs.microsoft.com/en-us/windows/win32/dlls/dllmain
+
+Notepad:
+https://kavatch.wordpress.com/2010/08/31/notepad-reverse-engineering/
+
+Memory in running process:
+https://docs.microsoft.com/en-us/windows/win32/api/memoryapi/nf-memoryapi-virtualquery
+https://docs.microsoft.com/en-us/windows/win32/api/memoryapi/nf-memoryapi-virtualqueryex
+https://docs.microsoft.com/en-us/windows/win32/api/memoryapi/nf-memoryapi-readprocessmemory
+https://nullprogram.com/blog/2016/09/03/
+https://stackoverflow.com/questions/14467229/get-base-address-of-process
+https://docs.microsoft.com/en-us/windows/win32/api/psapi/nf-psapi-enumprocessmodules?redirectedfrom=MSDN
+
+When Notepad wasn't getting keyboard events: 
+https://stackoverflow.com/questions/11890972/simulating-key-press-with-postmessage-only-works-in-some-applications
+https://docs.microsoft.com/en-us/visualstudio/debugger/how-to-start-spy-increment?view=vs-2019
+
+Registry Key For Notepad default font: 
+https://answers.microsoft.com/en-us/windows/forum/all/notepad-default-font/778a187f-772d-4604-849a-7c281e800e8d
+
+EnumWindows usage: 
+https://stackoverflow.com/questions/10246444/how-can-i-get-enumwindows-to-list-all-windows
+
+CreateThread:
+https://docs.microsoft.com/en-us/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread
+https://docs.microsoft.com/en-us/previous-versions/windows/desktop/legacy/ms686736(v=vs.85)
+
+Edit control messages (like setting font and wordwrap!)
+https://docs.microsoft.com/en-us/windows/win32/controls/edit-controls-text-operations#modifying-text
