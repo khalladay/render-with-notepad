@@ -23,7 +23,7 @@ https://docs.microsoft.com/en-us/windows/win32/api/processthreadsapi/nf-processt
 https://docs.microsoft.com/en-us/windows/win32/procthread/process-security-and-access-rights
 https://docs.microsoft.com/en-us/windows/win32/api/memoryapi/nf-memoryapi-writeprocessmemory
 https://docs.microsoft.com/en-us/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress
-https://stackoverflow.com/questions/9545732/what-is-hmodule -> GetProcAddress might not be sufficient
+https://stackoverflow.com/questions/9545732/what-is-hmodule
 
 Trampolines:
 https://www.ragestorm.net/blogs/?p=107

@@ -6,11 +6,14 @@ The end result is a game that seems to live entirely inside an instance of stock
 ## Included Projects
 There are a number of projects included as part of the render-in-notepad solution (located inside the Render-In-Notepad directory). They are as follows: 
 
-### MemoryScanner
-A quick and dirty memory scanning app which searches a target process' address space for a chosen byte pattern and prints that address to stdout. Requires the name of the (already running) process you wish to scan, and a string "byte pattern" as command line args. [Link](https://github.com/khalladay/render-with-notepad/tree/master/Render-With-Notepad/MemoryScanner)
-
 ### RayTracer
 A simple real time ray tracer which renders a 3D scene in Notepad, using memory scanning to get the address of Notepad's text buffer Requires you pass the path to Notepad.exe as a command line argument  [Link](https://github.com/khalladay/render-with-notepad/tree/master/Render-With-Notepad/RayTracer)
+
+### Snake
+A snake game which is played entirely in Notepad.exe. Uses memory scanning to get access to Notepad's text buffer, and uses the Innject_Payload_HookKeyboard dll to install a hook which redirects output from that Notepad instance to the Snake process so it can be used as game input. Requires the path to notepad.exe and the path to Inject_Payload_HookKeyboard's dll on the command line. [Link](https://github.com/khalladay/render-with-notepad/tree/master/Render-With-Notepad/Snake)
+
+### MemoryScanner
+A quick and dirty memory scanning app which searches a target process' address space for a chosen byte pattern and prints that address to stdout. Requires the name of the (already running) process you wish to scan, and a string "byte pattern" as command line args. [Link](https://github.com/khalladay/render-with-notepad/tree/master/Render-With-Notepad/MemoryScanner)
 
 ### FakeKeyboardInputToNotepad
 This program finds a running Notepad process and sends a WM_CHAR message to its edit control to print the letter 'E.' Requires that you already have notepad running. [Link](https://github.com/khalladay/render-with-notepad/tree/master/Render-With-Notepad/FakeKeyInputToNotepad)
@@ -29,6 +32,3 @@ A dll payload containing a KeyboardProc callback that opens a socket on localhos
 
 ### HookKeyboard_Injector
 Installs a WH_KEYBOARD hook into an already running instance of notepad. Can be used with both hook payloads described above. If used with Inject_Payload_HookKeyboard, this program will first start a listen socket, and will receive (and print) the keyboard events sent by the installed hook function. Requires you pass the path to the dll containing your desired hook function on the command line. [Link](https://github.com/khalladay/render-with-notepad/tree/master/Render-With-Notepad/HookKeyboard_Injector)
-
-### Snake
-A snake game which is played entirely in Notepad.exe. Uses memory scanning to get access to Notepad's text buffer, and uses the Innject_Payload_HookKeyboard dll to install a hook which redirects output from that Notepad instance to the Snake process so it can be used as game input. Requires the path to notepad.exe and the path to Inject_Payload_HookKeyboard's dll on the command line. [Link](https://github.com/khalladay/render-with-notepad/tree/master/Render-With-Notepad/Snake)

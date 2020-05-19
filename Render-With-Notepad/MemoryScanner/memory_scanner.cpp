@@ -25,7 +25,7 @@ void printHelp()
 	printf("MemoryScanner\nExample: MemoryScanner notepad.exe BananaBread\n");
 }
 
-DWORD findPidByName(const char* name)
+DWORD FindPidByName(const char* name)
 {
 	HANDLE h;
 	PROCESSENTRY32 singleProcess;
@@ -69,7 +69,7 @@ char* FindPattern(char* src, size_t srcLen, const char* pattern, size_t patternL
 	return nullptr;
 }
 
-void PrintAddressesThatMatchPattern(HANDLE process, const char* pattern, size_t patternLen)
+char* FindBytePatternInProcessMemory(HANDLE process, const char* pattern, size_t patternLen)
 {
 	MEMORY_BASIC_INFORMATION memInfo;
 	char* basePtr = (char*)0x0;
@@ -92,13 +92,14 @@ void PrintAddressesThatMatchPattern(HANDLE process, const char* pattern, size_t 
 				{
 					uint64_t diff = (uint64_t)match - (uint64_t)(localCopyContents);
 					char* processPtr = remoteMemRegionPtr + diff;
-					printf("pattern found at %p\n", processPtr);
+					return processPtr;
 				}
 			}
 			free(localCopyContents);
 		}
 		basePtr = (char*)memInfo.BaseAddress + memInfo.RegionSize;
 	}
+	return nullptr;
 }
 
 int main(int argc, const char** argv)
@@ -108,7 +109,7 @@ int main(int argc, const char** argv)
 		printHelp();
 	}
 
-	DWORD processID = findPidByName(argv[1]);
+	DWORD processID = FindPidByName(argv[1]);
 	if (!processID)
 	{
 		fprintf(stderr, "Could not find process %s\n", argv[1]);
@@ -135,7 +136,7 @@ int main(int argc, const char** argv)
 		pattern[i*2 + 1] = 0x0;
 	}
 
-	PrintAddressesThatMatchPattern(handle, pattern, patternLen*2);
-
+	char* address = FindBytePatternInProcessMemory(handle, pattern, patternLen*2);
+	if (address) printf("Found byte pattern at address: %p\n", address);
 	return 0;
 }
